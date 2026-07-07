@@ -25,6 +25,8 @@ drafts concrete, code-grounded tasks. Everything runs **local-first** and is **L
 
 <sub>The one-page edition, re-ranked and rewritten for the reader's current work. (Screenshots use a demo profile.)</sub>
 
+**📐 [How it works — architecture explainer (with diagrams)](https://ishtiaqhossain.github.io/the-daily-ai/)** · [read it on GitHub](docs/architecture.md)
+
 </div>
 
 ---
