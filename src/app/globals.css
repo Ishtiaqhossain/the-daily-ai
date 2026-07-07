@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+/* Hide the native disclosure triangle on the brief toggles */
+summary::-webkit-details-marker {
+  display: none;
+}
+summary {
+  list-style: none;
+}
+
+body {
+  background-color: theme("colors.paper");
+  color: theme("colors.ink");
+}
+
+/* Consistent, high-contrast keyboard focus ring on every interactive element. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid theme("colors.accent");
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Thin newspaper rules */
+.rule-t {
+  border-top: 1px solid theme("colors.hair");
+}
+.rule-b {
+  border-bottom: 1px solid theme("colors.hair");
+}
+.rule-l {
+  border-left: 1px solid theme("colors.hair");
+}
+.rule-double {
+  border-top: 3px double theme("colors.ink");
+}
+
+/* Small caps label used throughout the masthead/sections */
+.label {
+  font-family: theme("fontFamily.mono");
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: theme("colors.subtle");
+}
+
+.kicker {
+  font-family: theme("fontFamily.mono");
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: theme("colors.accent");
+}
+
+/* Drop cap for lead article body */
+.dropcap::first-letter {
+  font-family: theme("fontFamily.serif");
+  float: left;
+  font-size: 3.1rem;
+  line-height: 0.78;
+  padding-right: 0.08em;
+  padding-top: 0.06em;
+  font-weight: 600;
+}
+
+.link-underline {
+  background-image: linear-gradient(theme("colors.accent"), theme("colors.accent"));
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.2s ease;
+}
+.link-underline:hover {
+  background-size: 100% 1px;
+}
+
+/* Column dividers for the grid */
+.col-divider > * + * {
+  border-left: 1px solid theme("colors.hair");
+}
